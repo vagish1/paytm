@@ -22,13 +22,15 @@ class MethodChannelPaytm extends PaytmPlatform {
       required String merchantId,
       required String amount,
       required String transxToken,
-      required String callBackUrl}) async {
+      required String callBackUrl,
+      required bool isEmiAllowed}) async {
     final paymentResponse = await methodChannel.invokeMapMethod('payNow', {
       "orderId": orderId,
       "mid": merchantId,
       "txnToken": transxToken,
       "amount": amount,
-      "callBackUrl": callBackUrl
+      "callBackUrl": callBackUrl,
+      "emiAllowed": isEmiAllowed
     });
     return paymentResponse?.cast<String, Object>();
   }

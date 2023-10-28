@@ -61,6 +61,7 @@ public class PaytmPlugin implements FlutterPlugin, MethodCallHandler, PluginRegi
       transactionManager.setShowPaymentUrl(Objects.requireNonNull(args.get("callBackUrl")).toString());
       transactionManager.setEmiSubventionEnabled((boolean)Objects.requireNonNull(args.get("emiAllowed")));
       transactionManager.startTransaction(activity, PAYTM_REQUEST_CODE);
+
       return;
     }
       result.notImplemented();

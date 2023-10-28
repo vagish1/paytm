@@ -17,13 +17,15 @@ class Paytm {
       required String merchantId,
       required String amount,
       required String transxToken,
-      required String callBackUrl}) {
+      required String callBackUrl,
+      required bool isEmiAllowed}) {
     return PaytmPlatform.instance.payWithPaytm(
       orderId: orderId,
       merchantId: merchantId,
       amount: amount,
       callBackUrl: callBackUrl,
       transxToken: transxToken,
+      isEmiAllowed: isEmiAllowed,
     );
   }
 }

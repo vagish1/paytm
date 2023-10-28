@@ -16,7 +16,8 @@ class MockPaytmPlatform
       required String merchantId,
       required String amount,
       required String callBackUrl,
-      required String transxToken}) {
+      required String transxToken,
+      required bool isEmiAllowed}) {
     // TODO: implement payWithPaytm
     throw UnimplementedError();
   }
