@@ -26,4 +26,12 @@ abstract class PaytmPlatform extends PlatformInterface {
   Future<String?> getPlatformVersion() {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
+
+  Future<Map<String, Object>?> payWithPaytm(
+      {required String orderId,
+      required String merchantId,
+      required String amount,
+      required String callBackUrl}) {
+    throw UnimplementedError("payWithPaytm() has not been implemented");
+  }
 }

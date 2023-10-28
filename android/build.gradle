@@ -57,7 +57,7 @@ android {
 }
 
 dependencies {
-    implementation files('libs/flutter.jar')
+    
     implementation 'androidx.annotation:annotation:1.7.0'
     implementation 'com.paytm.appinvokesdk:appinvokesdk:1.6.17'
     implementation "com.squareup.okhttp3:okhttp:4.8.0"

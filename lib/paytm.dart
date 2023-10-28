@@ -11,4 +11,16 @@ class Paytm {
   Future<String?> getPlatformVersion() {
     return PaytmPlatform.instance.getPlatformVersion();
   }
+
+  Future<Map<String, Object>?> payNow(
+      {required String orderId,
+      required String merchantId,
+      required String amount,
+      required String callBackUrl}) {
+    return PaytmPlatform.instance.payWithPaytm(
+        orderId: orderId,
+        merchantId: merchantId,
+        amount: amount,
+        callBackUrl: callBackUrl);
+  }
 }
