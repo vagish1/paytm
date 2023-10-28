@@ -31,6 +31,7 @@ abstract class PaytmPlatform extends PlatformInterface {
       {required String orderId,
       required String merchantId,
       required String amount,
+      required String transxToken,
       required String callBackUrl}) {
     throw UnimplementedError("payWithPaytm() has not been implemented");
   }

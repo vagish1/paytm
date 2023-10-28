@@ -21,8 +21,15 @@ class MethodChannelPaytm extends PaytmPlatform {
       {required String orderId,
       required String merchantId,
       required String amount,
+      required String transxToken,
       required String callBackUrl}) async {
-    final paymentResponse = await methodChannel.invokeMapMethod('payNow');
+    final paymentResponse = await methodChannel.invokeMapMethod('payNow', {
+      "orderId": orderId,
+      "mid": merchantId,
+      "txnToken": transxToken,
+      "amount": amount,
+      "callBackUrl": callBackUrl
+    });
     return paymentResponse?.cast<String, Object>();
   }
 }

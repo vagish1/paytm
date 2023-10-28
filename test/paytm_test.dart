@@ -15,7 +15,8 @@ class MockPaytmPlatform
       {required String orderId,
       required String merchantId,
       required String amount,
-      required String callBackUrl}) {
+      required String callBackUrl,
+      required String transxToken}) {
     // TODO: implement payWithPaytm
     throw UnimplementedError();
   }

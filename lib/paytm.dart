@@ -16,11 +16,14 @@ class Paytm {
       {required String orderId,
       required String merchantId,
       required String amount,
+      required String transxToken,
       required String callBackUrl}) {
     return PaytmPlatform.instance.payWithPaytm(
-        orderId: orderId,
-        merchantId: merchantId,
-        amount: amount,
-        callBackUrl: callBackUrl);
+      orderId: orderId,
+      merchantId: merchantId,
+      amount: amount,
+      callBackUrl: callBackUrl,
+      transxToken: transxToken,
+    );
   }
 }
