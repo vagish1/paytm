@@ -33,7 +33,11 @@ public class PaytmTransactionCallback implements PaytmPaymentTransactionCallback
 
         }else{
             paymentResponse.put("errorOccurred",true);
-            paymentResponse.put("messageFromPaytm",bundle.get("nativeSdkForMerchantMessage"));
+            String msg ="Unexpected error";
+            if(bundle.get("nativeSdkForMerchantMessage")!=null){
+                msg = bundle.get("nativeSdkForMerchantMessage").toString();
+            }
+            paymentResponse.put("messageFromPaytm",msg);
 
         }
 
