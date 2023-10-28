@@ -110,7 +110,7 @@ public class PaytmPlugin implements FlutterPlugin, MethodCallHandler, PluginRegi
   public void onDetachedFromActivityForConfigChanges() {
 
   activity = null;
- 
+
   }
 
   @Override
