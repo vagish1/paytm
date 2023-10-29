@@ -104,7 +104,7 @@ public class PaytmPlugin: NSObject, FlutterPlugin, AIDelegate  {
     case "payNow":
         var arguments =  call.arguments as? NSDictionary
         
-        let mId = arguments!["mId"] as! String
+        let mId = arguments!["mid"] as! String
                    let orderId = arguments!["orderId"] as! String
                    let amount = arguments!["txnAmount"] as! String
                    let txnToken = arguments!["txnToken"] as! String
