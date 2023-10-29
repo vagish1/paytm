@@ -106,7 +106,7 @@ public class PaytmPlugin: NSObject, FlutterPlugin, AIDelegate  {
         
         let mId = arguments!["mid"] as! String
                    let orderId = arguments!["orderId"] as! String
-                   let amount = arguments!["txnAmount"] as! String
+                   let amount = arguments!["amount"] as! String
                    let txnToken = arguments!["txnToken"] as! String
                    let callBackUrl = arguments!["callBackUrl"] as! String
                    let isStaging = arguments!["isStaging"] as! Bool

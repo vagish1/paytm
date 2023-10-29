@@ -30,7 +30,8 @@ class MethodChannelPaytm extends PaytmPlatform {
       "txnToken": transxToken,
       "amount": amount,
       "callBackUrl": callBackUrl,
-      "emiAllowed": isEmiAllowed
+      "emiAllowed": isEmiAllowed,
+      "isStaging": true,
     });
     return paymentResponse?.cast<String, Object>();
   }
